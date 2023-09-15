@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitologia Nordycka</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        <button class="home" onclick="window.location.href = 'Index.html';"></button>
+        <button class="Insta" onclick="window.location.href = 'https://www.instagram.com/loki_brekker';"></button>
+        <button class="Git" onclick="window.location.href = 'Loki.html';"></button>
+
+    </div>
+    <h1><b>Mitologia Nordycka<br>by Loki Brekker</b></h1>
+    
+    <div class="tree">
+        <div class="top-gods">
+            <div class="god top-god" id="odin">
+                <img src="Images/odin.jpg" alt="Odyn">
+                <h2><b>Odyn</b></h2>
+                <div class="god-description"><b>Odyn</b> jest głównym bogiem w mitologii nordyckiej. Jest bogiem mądrości i wojny.</div>
+            </div>
+            <div class="god top-god" id="frigg">
+                <img src="Images/frigg.jpg" alt="Frigg">
+                <h2><b>Frigg</b></h2>
+                <div class="god-description"><b>Frigg</b> to bogini małżeństwa, miłości i macierzyństwa. Jest żoną Odyna.</div>
+            </div>
+        </div>
+        <div class="gods-line">
+            <div class="god" id="loki">
+                <img src="Images/loki.jpg" alt="Loki">
+                <h2><b>Loki</b></h2>
+                <div class="god-description"><b>Loki</b> jest bogiem chaosu i psoty. Często wprowadza zamieszanie wśród bogów.</div>
+            </div>
+            <div class="god" id="thor">
+                <img src="Images/thor.jpg" alt="Thor">
+                <h2><b>Thor</b></h2>
+                <div class="god-description"><b>Thor</b> jest bogiem burzy i ochrony. Posiada młot, którym walczy z potworami.</div>
+            </div>
+            <div class="god" id="baldur">
+                <img src="Images/baldur.jpg" alt="Baldur">
+                <h2><b>Baldur</b></h2>
+                <div class="god-description"><b>Baldur</b> jest bogiem światła i piękna. Jest synem Odyna i Frei.</div>
+            </div>
+            <div class="god" id="freya">
+                <img src="Images/freya.jpg" alt="Freja">
+                <h2><b>Freja</b></h2>
+                <div class="god-description"><b>Freja</b> jest boginią miłości i płodności. Jest siostrą Freyra.</div>    
+            </div>
+            <div class="god" id="Bragi">
+                <img src="Images/Bragi.jpg" alt="Bragi">
+                <h2><b>Bragi</b></h2>
+                <div class="god-description"><b>Bragi</b> jest bogiem poezji, skaldów i elokwencji, należał do rodu Azów.</div>
+            </div>
+            <div class="god" id="Freyr">
+                <img src="Images/Freyr.jpg" alt="Freyr">
+                <h2><b>Freyr</b></h2>
+                <div class="god-description"><b>Freyr</b> jest bogiem urodzaju, roślinności, pokoju, płodności, bogactwa i radości.</div>
+            </div>
+            <div class="god" id="Tyr">
+                <img src="Images/Tyr.jpg" alt="Tyr">
+                <h2><b>Tyr</b></h2>
+                <div class="god-description"><b>Tyr</b> jest bogiem wojny, walki i siły, a także honoru, prawa i sprawiedliwości.</div>
+            </div>
+            <div class="god" id="Heimdall">
+                <img src="Images/Heimdall.jpg" alt="Heimdall">
+                <h2><b>Heimdall</b></h2>
+                <div class="god-description"><b>Heimdall</b> jest bogiem strzegącym Tęczowy Most zwany Bifrost, będący wejściem do Asgardu.</div>    
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const gods = document.querySelectorAll('.god');
+
+        gods.forEach(god => {
+            god.addEventListener('mouseover', () => {
+                const description = god.querySelector('.god-description');
+                description.style.display = 'block';
+            });
+
+            god.addEventListener('mouseout', () => {
+                const description = god.querySelector('.god-description');
+                description.style.display = 'none';
+            });
+
+            god.addEventListener('click', () => {
+                const godId = god.id;
+                window.location.href = `${godId}.html`;
+            });
+        });
+    </script>
+</body>
+</html>
